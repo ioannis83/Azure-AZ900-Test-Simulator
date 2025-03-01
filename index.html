@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZ-900 Test Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Azure AZ-900 Test Simulator</h1>
+        <div class="progress-bar">
+            <div id="progress"></div>
+        </div>
+        <div class="header-info">
+            <div id="question-number"></div>
+            <div id="timer" class="timer">1:40:00</div>
+        </div>
+        <div id="question-container">
+            <!-- Question and answers will be dynamically inserted here -->
+        </div>
+        <div class="button-container">
+            <button id="prev-button" onclick="previousQuestion()">Previous</button>
+            <button id="next-button" onclick="nextQuestion()">Next</button>
+        </div>
+        <div id="score-container" class="score-container hidden">
+            <h2>Test Complete!</h2>
+            <p>Your score: <span id="final-score">0</span>%</p>
+            <button id="restart-button" onclick="restartTest()">Restart Test</button>
+        </div>
+    </div>
+    <script src="questions.js"></script>
+    <script src="timer.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
